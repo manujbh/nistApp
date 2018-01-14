@@ -3,16 +3,23 @@
 }
 
 function init() {
-    var familybtn = document.getElementById("family");
-    familybtn.addEventListener('click', familycontent);
+    var familyBtn = document.getElementById("family");
+    familyBtn.addEventListener('click', familyContent);
+
+    var subsecBtn = document.getElementById("subsec");
+    subsecBtn.addEventListener('click', subsecContent);
 
     document.addEventListener('click', hideDropdown);
 
 }
 
-function familycontent(event) {
-    document.getElementById("myDropdown").classList.toggle("show");
+function familyContent(event) {
+    document.getElementById("familyDropdown").classList.toggle("show");
 }
+function subsecContent(event) {
+    document.getElementById("subsecDropdown").classList.toggle("show");
+}
+
 
 function hideDropdown(event) {
     // Close the dropdown menu if the user clicks outside of it
