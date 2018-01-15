@@ -3,8 +3,12 @@
 }
 
 function init() {
+    var myecho = "this is an echo";
+
+
+
     var familyBtn = document.getElementById("family");
-    familyBtn.addEventListener('click', familyContent);
+    familyBtn.addEventListener('click', familyContent(myecho));
 
     var subsecBtn = document.getElementById("subsec");
     subsecBtn.addEventListener('click', subsecContent);
@@ -13,10 +17,13 @@ function init() {
 
 }
 
-function familyContent(event) {
+function familyContent(myecho) {
+    console.log(myecho);
     document.getElementById("familyDropdown").classList.toggle("show");
+    // '+' can be used to concatenete string. use results from query to populate innerhtml.
+    /*document.getElementById("familyDropdown").innerHTML = '<a href="#">Link 9</a>';*/
 }
-function subsecContent(event) {
+function subsecContent() {
     document.getElementById("subsecDropdown").classList.toggle("show");
 }
 
