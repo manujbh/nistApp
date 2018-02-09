@@ -12,6 +12,24 @@
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener( 'resume', onResume.bind( this ), false );
 
+        window.sqlitePlugin.echoTest(function () {
+            console.log('ECHO test OK');
+        });
+
+        window.sqlitePlugin.selfTest(function () {
+            console.log('SELF test OK');
+        });
+
+        /*
+        var db = window.sqlitePlugin.openDatabase({ name: "nistAppDB.db", androidDatabaseImplementation: 2, location: 'default', createFromLocation: 1 });
+        db.transaction(function (tx) {
+            tx.executeSql('SELECT count(*) AS mycount FROM table2', [], function (tx, rs) {
+                console.log('Record count: ' + rs.rows.item(0).mycount);
+            }, function (tx, error) {
+                console.log('SELECT error: ' + error.message);
+            });
+        });
+        */
 
     };
 

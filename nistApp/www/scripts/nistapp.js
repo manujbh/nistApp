@@ -4,9 +4,6 @@
 
 function init() {
     var myecho = "this is an echo";
-
-
-
     var familyBtn = document.getElementById("family");
     familyBtn.addEventListener('click', familyContent(myecho));
 
